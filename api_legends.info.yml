@@ -1,0 +1,6 @@
+name: API Legends
+description: Drupal/JS game about API.
+package: GameDev
+
+type: module
+core_version_requirement: ^8.8
