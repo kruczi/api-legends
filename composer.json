@@ -1,0 +1,9 @@
+{
+  "name": "api-legends",
+  "license": "GPL-2.0-or-later",
+  "type": "drupal-module",
+  "description": "Game for Drupal.",
+  "require": {
+    "php": ">=7.1"
+  }
+  }
