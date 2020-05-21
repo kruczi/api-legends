@@ -1,8 +1,8 @@
 <?php
 
-namespace Drupal\Tests\apigee_edge\Unit;
+namespace Drupal\api_legends\Tests\Unit;
 
-use Drupal\api_legends\Hero;
+use Drupal\api_legends\Model\Hero;
 use Drupal\Tests\UnitTestCase;
 
 
@@ -14,7 +14,7 @@ use Drupal\Tests\UnitTestCase;
 class HeroTest extends UnitTestCase {
 
   public function providerGetHero() {
-    $hero = new Hero();
+    $hero = new Hero('elf');
 
     return $hero;
   }
@@ -23,7 +23,7 @@ class HeroTest extends UnitTestCase {
    *
    */
   public function testHeroPassStrengthValue() {
-    $hero = new Hero();
+    $hero = new Hero('dwarf');
     // The new object od class Hero should have value zero.
     $this->assertEquals(0, $hero->getStrength());
     $hero->setStrength(55);
@@ -34,7 +34,7 @@ class HeroTest extends UnitTestCase {
    * @expectedException \Exception
    */
   public function testHeroPassStrengthInvalidValue() {
-    $hero = new Hero();
+    $hero = new Hero('elf');
     $hero->setStrength('invalid value');
   }
 
@@ -42,7 +42,7 @@ class HeroTest extends UnitTestCase {
    *
    */
   public function testHeroPassHealthValue() {
-    $hero = new Hero();
+    $hero = new Hero('human');
     // The new object od class Hero should have value zero.
     $this->assertEquals(0, $hero->getHealth());
     $hero->setHealth(55);
@@ -53,7 +53,7 @@ class HeroTest extends UnitTestCase {
    * @expectedException \Exception
    */
   public function testHeroPassHealthInvalidValue() {
-    $hero = new Hero();
+    $hero = new Hero('elf');
     $hero->setHealth('invalid value');
   }
 }

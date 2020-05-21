@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\api_legends;
+namespace Drupal\api_legends\Model;
 
 use function GuzzleHttp\Psr7\str;
 
@@ -11,6 +11,10 @@ class Hero {
   private $strength = 0;
 
   private $health = 0;
+
+  public function __construct($type) {
+    $this->type = $type;
+  }
 
   /**
    * @return mixed
